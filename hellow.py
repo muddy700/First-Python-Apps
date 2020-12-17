@@ -163,49 +163,49 @@ import math
 # # shows the message
 # print(' '.join(sentence))
 
-        # Example 11
-import random
+#         # Example 11
+# import random
 
-print("H A N G M A N")
-def game():
+# print("H A N G M A N")
+# def game():
 
-        words = ['python', 'java', 'kotlin', 'javascript']
-        chosen = random.choice(words)
-        selected = set(chosen)
-        guessed = list("-" * len(chosen))
-        wrong_Letters = []
+#         words = ['python', 'java', 'kotlin', 'javascript']
+#         chosen = random.choice(words)
+#         selected = set(chosen)
+#         guessed = list("-" * len(chosen))
+#         wrong_Letters = []
 
-        status = input('Type "play" to play the game, "exit" to quit: > ')
-        if status == 'play':
-                tries = 8
-        else:
-                game()
+#         status = input('Type "play" to play the game, "exit" to quit: > ')
+#         if status == 'play':
+#                 tries = 8
+#         else:
+#                 game()
 
-        while tries > 0:
-                print()
-                print(''.join(guessed))   
-                letter = input("Input a letter: > ")
+#         while tries > 0:
+#                 print()
+#                 print(''.join(guessed))   
+#                 letter = input("Input a letter: > ")
 
-                if len(letter) != 1:
-                        print("Enter Single Character")
-                        tries -= 1
-                elif letter in  wrong_Letters:
-                        print("You've already guessed this letter")
-                        tries -= 1
-                elif letter not in  selected:
-                        print("That letter doesn't appear in the word")
-                        wrong_Letters.append(letter)
-                        tries -= 1
-                elif letter in selected:
-                        for k in range(len(chosen)):
-                                if letter == chosen[k]:
-                                        guessed[k] = letter
-                                        wrong_Letters.append(letter)
+#                 if len(letter) != 1:
+#                         print("Enter Single Character")
+#                         tries -= 1
+#                 elif letter in  wrong_Letters:
+#                         print("You've already guessed this letter")
+#                         tries -= 1
+#                 elif letter not in  selected:
+#                         print("That letter doesn't appear in the word")
+#                         wrong_Letters.append(letter)
+#                         tries -= 1
+#                 elif letter in selected:
+#                         for k in range(len(chosen)):
+#                                 if letter == chosen[k]:
+#                                         guessed[k] = letter
+#                                         wrong_Letters.append(letter)
 
-        print('\n \n')
-        game()
+#         print('\n \n')
+#         game()
 
-game()
+# game()
 
 #     lives = 8
 #     while lives > 0:
